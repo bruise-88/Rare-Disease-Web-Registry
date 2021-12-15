@@ -1,9 +1,6 @@
 package com.example.web_registry;
 
 import com.example.web_registry.Dataset.DatasetInitializer;
-// import com.example.web_registry.runner.CRUDRunner;
-import com.example.web_registry.runner.QueryRunner;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
