@@ -19,6 +19,15 @@ public class Clinical_Visit_Data {
     private String name;
     private String lastname;
     private Integer age;
+    private String dateOfExamination;
+    private String dateOfBirth;
+    private String provisionalDiagnosis;
+    private String gender;
+    private String presentingComplaints;
+    private String familyHistory;
+    private String medicationHistory;
+    private String degreeOfConsanguinity;
+    private String other;
     
     @Relations(edges=ReferredFrom.class, lazy = true)
     private List<HospitalDetails> referringHospitals;
@@ -74,16 +83,126 @@ public class Clinical_Visit_Data {
         this.age = age;
     }
 
+    public String getDateOfExamination() {
+        return dateOfExamination;
+    }
+
+    public String setDateOfExamination(String dateOfExamination) {
+        this.dateOfExamination = dateOfExamination;
+        return dateOfExamination;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return dateOfBirth;
+    }
+
+    public String getProvisionalDiagnosis() {
+        return provisionalDiagnosis;
+    }
+
+    public String setProvisionalDiagnosis(String provisionalDiagnosis) {
+        this.provisionalDiagnosis = provisionalDiagnosis;
+        return provisionalDiagnosis;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String setGender(String gender){
+        this.gender = gender;
+        return gender;
+    }
+
+    public String getPresentingComplaints()
+    {
+        return presentingComplaints;
+    }
+
+    public String setPresentingComplaints(String presentingComplaints)
+    {
+        this.presentingComplaints = presentingComplaints;
+        return presentingComplaints;
+    }
+
+    public String getFamilyHistory()
+    {
+        return familyHistory;
+    }
+
+    public String setFamilyHistory(String familyHistory)
+    {
+        this.familyHistory = familyHistory;
+        return familyHistory;
+    }
+
+    public String getMedicationHistory()
+    {
+        return medicationHistory;
+    }
+
+    public String setMedicationHistory(String medicationHistory)
+    {
+        this.medicationHistory = medicationHistory;
+        return medicationHistory;
+    }
+
+    public String getDegreeOfConsanguinity()
+    {
+        return degreeOfConsanguinity;
+    }
+
+    public String setDegreeOfConsanguinity(String degreeOfConsanguinity)
+    {
+        this.degreeOfConsanguinity = degreeOfConsanguinity;
+        return degreeOfConsanguinity;
+    }
+
+    public String getOther()
+    {
+        return other;
+    }
+
+    public String setOther(String other)
+    {
+        this.other = other;
+        return other;
+    }
 
     public Clinical_Visit_Data(){
         super();
     }
 
-    public Clinical_Visit_Data(final String name, final String lastname, final Integer age) {
+    public Clinical_Visit_Data(final String name, 
+                               final String lastname, 
+                               final Integer age, 
+                               final String dateOfExamination, 
+                               final String dateOfBirth, 
+                               final String provisionalDiagnosis, 
+                               final String gender, 
+                               final String presentingComplaints,
+                               final String familyHistory,
+                               final String medicationHistory,
+                               final String degreeOfConsanguinity,
+                               final String other) {
         super();
         this.name = name;
         this.lastname = lastname;
         this.age = age;
+        this.dateOfExamination = dateOfExamination;
+        this.dateOfBirth = dateOfBirth;
+        this.provisionalDiagnosis = provisionalDiagnosis;
+        this.gender = gender;
+        this.presentingComplaints = presentingComplaints;
+        this.familyHistory = familyHistory;
+        this.medicationHistory = medicationHistory;
+        this.degreeOfConsanguinity = degreeOfConsanguinity;
+        this.other = other;
     }
 
 	@Override
