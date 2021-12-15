@@ -26,6 +26,22 @@ public class Clinical_Visit_Data {
     @Relations(edges=Undergoes.class, lazy = true)
     private List<Investigations> investigations;
 
+    public List<HospitalDetails> getReferringHospitals() {
+        return referringHospitals;
+    }
+
+    public void setReferringHospitals(List<HospitalDetails> referringHospitals) {
+        this.referringHospitals = referringHospitals;
+    }
+
+    public List<Investigations> getInvestigations() {
+        return investigations;
+    }
+
+    public void setInvestigations(List<Investigations> investigations) {
+        this.investigations = investigations;
+    }
+
     public String getId() {
         return id;
     }
