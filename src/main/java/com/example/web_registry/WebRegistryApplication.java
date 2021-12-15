@@ -10,11 +10,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class WebRegistryApplication {
 
-	// static Class<?>[]runner = new Class<?>[]{DatasetInitializer.class, QueryRunner.class, WebRegistryApplication.class};
+	static Class<?>[]runner = new Class<?>[]{DatasetInitializer.class, WebRegistryApplication.class};
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebRegistryApplication.class, args);
-		// SpringApplication.run(runner, args);
+		// SpringApplication.run(WebRegistryApplication.class, args);
+		SpringApplication.run(runner, args);
 	}
 
 }

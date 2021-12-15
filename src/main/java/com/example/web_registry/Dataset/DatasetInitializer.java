@@ -87,7 +87,7 @@ public class DatasetInitializer implements CommandLineRunner{
         {
             String[] patient = patients[i];
             final Clinical_Visit_Data patientData = new Clinical_Visit_Data(patient[0], patient[1], Integer.parseInt(patient[2]), patient[3], patient[4], patient[5], patient[6], patient[7], patient[8], patient[9], patient[10], patient[11]);
-            patientData.setId(patient[0]);
+            patientData.setId(Integer.toString(i));
             clinicalVisitDataRepo.save(patientData);
 
             String[] doctor = doctors[i];
