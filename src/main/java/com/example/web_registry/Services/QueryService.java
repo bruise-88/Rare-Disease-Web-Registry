@@ -8,6 +8,8 @@ import com.example.web_registry.entity.*;
 import com.example.web_registry.repository.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -37,6 +39,12 @@ public class QueryService{
 
     public Optional<Clinical_Visit_Data> patientIdQuery(String patientID){
         return clinicalVisitDataRepo.findById(patientID);
+    }
+
+    public Optional<Clinical_Visit_Data> patientQuery(Clinical_Visit_Data patientData){
+        ExampleMatcher eMatcher = ExampleMatcher.matchingAll().withIgnoreCase();
+        Example<Clinical_Visit_Data> probingObject = Example.of(patientData, eMatcher);
+        return clinicalVisitDataRepo.findOne(probingObject);
     }
     
 }

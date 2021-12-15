@@ -18,8 +18,8 @@ public class RegistryController {
     private QueryService qs;
 
     @GetMapping("/patientquery")
-    Clinical_Visit_Data getPatientData(@RequestParam(defaultValue = "1",required = true) String id){
-        Optional<Clinical_Visit_Data> patientDataOpt = qs.patientIdQuery(id);
+    Clinical_Visit_Data getPatientData(Clinical_Visit_Data patientModel){
+        Optional<Clinical_Visit_Data> patientDataOpt = qs.patientQuery(patientModel);
         Clinical_Visit_Data patientData;
         if(patientDataOpt.isPresent()){
             patientData = patientDataOpt.get();
